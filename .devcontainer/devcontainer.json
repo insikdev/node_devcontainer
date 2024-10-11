@@ -1,0 +1,26 @@
+{
+  "name": "Node.js & TypeScript",
+  "build": { "dockerfile": "Dockerfile" },
+  "mounts": [
+    {
+      "source": "${localEnv:USERPROFILE}\\.wakatime.cfg",
+      "target": "/home/node/.wakatime.cfg",
+      "type": "bind"
+    }
+  ],
+  "customizations": {
+    "vscode": {
+      "extensions": [
+        "WakaTime.vscode-wakatime",
+        "esbenp.prettier-vscode",
+        "bradlc.vscode-tailwindcss",
+        "Angular.ng-template"
+      ],
+      "settings": {
+        "editor.defaultFormatter": "esbenp.prettier-vscode",
+        "editor.formatOnSave": true
+      }
+    }
+  },
+  "remoteUser": "node"
+}
